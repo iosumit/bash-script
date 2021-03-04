@@ -15,13 +15,8 @@ do
 	di=$k
 	i=0
 
-	while [ $di -ne 0 ]
-	do
-		di=`expr $di / 10`
-		i=`expr $i + 1`
-	done
-	ds=`expr length $k`
-	echo "$k DII $ds"
+	i=`expr length $k`
+
 	while [ $item -ne 0 ]
 	do
 		cube=1
@@ -33,7 +28,7 @@ do
 		done
 
 		sum=`expr $sum + $cube`
-		#echo "SUm $sum"
+
 		item=`expr $item / 10`
 	done
 
